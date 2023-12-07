@@ -15,8 +15,6 @@ export const Layout = () => {
                 <NavLink className={isActiveLink} to="/create">Create ✍️</NavLink>
             </nav>
 
-            <hr className='divider' />
-
             <div className='container'>
             <div>
                 <a href="https://vitejs.dev" target="_blank">
@@ -26,7 +24,7 @@ export const Layout = () => {
                 <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
-            <h1>Vite + React</h1>
+            <h1>Vite + React + React Query</h1>
                 <Outlet />
             </div>
         </>

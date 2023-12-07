@@ -1,0 +1,19 @@
+.delete-user {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+.delete-button-user {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button-user:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+}

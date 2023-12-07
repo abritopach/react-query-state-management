@@ -1,22 +1,22 @@
+import { UserForm } from "../components/UserForm";
+import { useCreateUser } from "../hooks/custom/UseUser";
+
+
 export const CreateUser = () => {
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        const form = e.target as HTMLFormElement
-        const data = Object.fromEntries(new FormData(form))
-        console.log('data', data);
+    const createUser = useCreateUser();
 
-        form.reset()
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.target as HTMLFormElement;
+        const data = Object.fromEntries(new FormData(form));
+
+        await createUser.mutateAsync({ name: data.user as string  });
+
+        form.reset();
     }
 
     return (
-        <div>
-            <h1>Create User</h1>
-            <form onSubmit={handleSubmit} className='mt'>
-                <input name='user' type="text" placeholder='Add new user' />
-
-                <button>Add User</button>
-            </form>
-        </div>
+        <UserForm mode="create" handleSubmit={handleSubmit} mutationResult={createUser} />
     )
 }

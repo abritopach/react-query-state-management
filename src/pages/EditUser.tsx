@@ -4,11 +4,11 @@ import { ViewUser } from '../components/ViewUser';
 import { EditUserForm } from '../components/EditUserForm';
 
 export const EditUser = () => {
-    const params = useParams()
+    const params = useParams();
 
-    const { id } = params
+    const { id } = params;
 
-    if (!id) return null
+    if (!id) return null;
 
     return (
         <>

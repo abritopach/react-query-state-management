@@ -1,0 +1,33 @@
+.form-user {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+.input-user {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.button-user {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-user:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+}
+
+.message-user {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.error-user {
+    color: #ff0000;
+}
